@@ -1,0 +1,139 @@
+/* Center container */
+.customerlogin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4f46e5, #6366f1, #818cf8);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Card box */
+.customerlogin-form {
+  background: #fff;
+  width: 350px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.customerlogin-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.customerlogin-form h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Inputs */
+.customerlogin-form input[type="text"],
+.customerlogin-form input[type="password"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.customerlogin-form input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+  outline: none;
+}
+
+/* Password field with icon */
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
+.password-field .eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.password-field .eye-icon:hover {
+  color: #4f46e5;
+}
+
+/* Error message */
+.error {
+  color: #e11d48;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  align-self: flex-start;
+}
+
+/* Remember me checkbox */
+.remember-me {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0.5rem 0 1.2rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Button */
+.customerlogin-button {
+  width: 100%;
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.customerlogin-button:hover {
+  background: linear-gradient(90deg, #4338ca, #4f46e5);
+  transform: scale(1.02);
+}
+
+/* Forgot password link */
+.forgot-password-link {
+  color: #4f46e5;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.forgot-password-link:hover {
+  color: #312e81;
+  text-decoration: underline;
+}
+
+/* Forgot password success/error message */
+.customerlogin-form p {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 420px) {
+  .customerlogin-form {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}

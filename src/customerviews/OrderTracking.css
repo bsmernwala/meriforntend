@@ -1,0 +1,130 @@
+.tracking-container {
+  background: #051c4d;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  max-width: 700px;
+  margin: 20px auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.tracking-title {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.label {
+  font-weight: 500;
+}
+
+.bill-select {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.order-card {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 12px;
+  background: #2059c3;
+  border-left: 4px solid #2196f3;
+}
+
+/* Status Colors */
+.status-badge {
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.status-OrderPlaced      { background: #007bff; }
+.status-Processing       { background: #ff9800; }
+.status-Shipped          { background: #9c27b0; }
+.status-OutforDelivery   { background: #2196f3; }
+.status-Delivered        { background: #4caf50; }
+
+/* Progress Bar */
+.progress-wrapper {
+  margin-top: 25px;
+}
+
+.progress-line {
+  height: 5px;
+  background: #ddd;
+  border-radius: 10px;
+}
+
+.progress-fill {
+  height: 5px;
+  background: #4caf50;
+  border-radius: 10px;
+}
+
+/* Steps */
+.progress-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.progress-step {
+  text-align: center;
+  color: #aaa;
+}
+
+.progress-step.active {
+  color: #4caf50;
+}
+
+.step-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-step.active .step-circle {
+  background: #4caf50;
+  color: white;
+}
+
+/* Timeline */
+.timeline {
+  margin-top: 30px;
+  border-left: 3px solid #ccc;
+  padding-left: 20px;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline-item.completed .timeline-marker {
+  background: #4caf50;
+}
+
+.timeline-marker {
+  width: 14px;
+  height: 14px;
+  background: #ccc;
+  border-radius: 50%;
+  position: absolute;
+  left: -27px;
+  top: 5px;
+}
+
+.timeline-content {
+  font-size: 15px;
+  font-weight: 500;
+}

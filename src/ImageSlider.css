@@ -1,0 +1,10 @@
+
+ .slider-container {
+  width: 100;
+  height: auto;
+}
+
+.slider-container img {
+  width: 60%;
+  height: auto;
+}

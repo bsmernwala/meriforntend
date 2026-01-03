@@ -1,0 +1,42 @@
+.theme-toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 55px;
+  height: 15px;
+  background: var(--color-btn-primary);
+  border-radius: 50px;
+  transition: background 0.3s ease;
+  box-shadow: var(--shadow-light);
+}
+
+.toggle-switch.dark {
+  background: var(--color-accent-purple);
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.toggle-switch.dark .toggle-thumb {
+  left: 30px;
+  background: var(--color-accent-orange);
+}
+
+.toggle-label {
+  font-weight: 300;
+  color: var(--color-text-inverse);
+}

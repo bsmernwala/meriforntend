@@ -1,0 +1,68 @@
+/* ===== Vendor Login Styles ===== */
+.venderlogin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  background: #f4f7fb;
+  padding: 20px;
+}
+
+.venderlogin-form {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  max-width: 400px;
+  width: 100%;
+}
+
+.venderlogin-form h4 {
+  text-align: center;
+  color: #1e40af;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.venderlogin-form input[type="text"],
+.venderlogin-form input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.venderlogin-form input:focus {
+  border-color: #1e40af;
+}
+
+.venderlogin-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1e40af;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.venderlogin-button:hover {
+  background-color: #3749b9;
+}
+
+.venderlogin-form .remember-me {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0 15px;
+}
+
+.venderlogin-form .remember-me input {
+  margin-right: 6px;
+}

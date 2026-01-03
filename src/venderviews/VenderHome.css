@@ -1,0 +1,133 @@
+/* Container */
+.venderhome-container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+   max-width: 1600px; /* ⬅️ increased from 1200px */
+  width: 95%;        /* use most of the screen width */
+  margin: 20px auto;
+  padding: 30px;
+}
+
+/* Sticky Header Navbar */
+.venderhome-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  z-index: 1000;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Left side (image + name) */
+.venderhome-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Vendor image */
+.venderhome-image {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+/* Vendor name text */
+.venderhome-name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Logout button styled */
+.btn-logout {
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn-logout:hover {
+  background: #cc0000;
+}
+
+/* Main content */
+.venderhome-content {
+  padding: 30px 20px;
+}
+
+.venderhome-content h2 {
+  margin-bottom: 15px;
+  color: #0056b3;
+}
+
+.venderhome-content p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.venderhome-content h5 {
+  margin-bottom: 20px;
+}
+
+/* Primary button */
+.btn-primary {
+  background: #007bff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 14px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .venderhome-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .btn-logout {
+    align-self: flex-end;
+  }
+
+  .venderhome-name {
+    font-size: 14px;
+  }
+
+  .venderhome-content {
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .venderhome-header {
+    padding: 10px;
+  }
+
+  .venderhome-image {
+    height: 35px;
+    width: 35px;
+  }
+
+  .btn-logout {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}

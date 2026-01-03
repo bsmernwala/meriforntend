@@ -1,0 +1,170 @@
+/* =====================
+   Vendor Registration Page (Dark Blue Theme - Wide Layout)
+===================== */
+
+.venderreg-container {
+  background-color: #f4f6f9;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 0;
+}
+
+/* Main Form Box */
+.venderreg-form {
+  background-color: #002b5c; /* dark blue */
+  color: #fff;
+  width: 650px; /* increased width */
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  padding: 40px 50px;
+  text-align: left;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.venderreg-form h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 26px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+.status {
+  text-align: center;
+  font-size: 15px;
+  color: #00ff9d;
+  margin-bottom: 12px;
+}
+
+/* Form Fields */
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #cce0ff;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: #e8f0fe;
+  color: #003366;
+  font-size: 16px;
+}
+
+.form-group input:focus {
+  border: 2px solid #007bff;
+  background-color: #ffffff;
+}
+
+.readonly {
+  background-color: #003366;
+  color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+/* Password Field with Eye Icon */
+.input-with-icon {
+  display: flex;
+  align-items: center;
+  background-color: #e8f0fe;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.input-with-icon input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px;
+  background: none;
+  color: #003366;
+}
+
+.eye-icon {
+  padding: 10px 14px;
+  color: #003366;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Image Preview */
+.preview {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #007bff;
+}
+
+/* Error & Status Text */
+.error {
+  color: #ff6b6b;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-danger {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #cc0000;
+}
+
+/* Upload Button */
+.mt-2 {
+  margin-top: 10px;
+}
+
+/* Centered form actions */
+.form-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

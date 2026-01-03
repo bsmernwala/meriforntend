@@ -1,0 +1,66 @@
+.vendermain {
+  background-color: #0b1020;
+  color: #e8ebff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* ===== HEADER ===== */
+.vender-header {
+  padding: 20px 10px 10px;
+}
+
+.panel-title {
+  color: #5bd1ff;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+/* ===== STICKY NAV ===== */
+.vender-nav {
+  position: sticky;
+  top: 0;
+  background-color: #121836;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(91, 209, 255, 0.4);
+  border-radius: 8px;
+  margin: 0 20px;
+}
+
+.vender-btn {
+  background-color: #4f46e5;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.vender-btn:hover {
+  background-color: #5bd1ff;
+  color: #0b1020;
+  transform: translateY(-2px);
+}
+
+/* ===== CONTENT ===== */
+.vender-content {
+  flex: 1;
+  padding: 30px 20px;
+}
+
+/* ===== FOOTER ===== */
+.footer-marquee {
+  background-color: #121836;
+  color: #5bd1ff;
+  padding: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+}

@@ -1,0 +1,89 @@
+.vender-container {
+  padding: 20px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: all 0.4s ease;
+}
+
+.vender-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-card-bg);
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-light);
+}
+
+.vender-content {
+  margin-top: 20px;
+  padding: 20px;
+  background: var(--color-card-bg);
+  border-radius: 12px;
+  box-shadow: var(--shadow-light);
+}
+
+/* ---------- Tables ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-bg-card);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  overflow: hidden;
+  color: var(--color-text-primary);
+  transition: all 0.3s ease-in-out;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Table Header */
+table th {
+  background: var(--color-accent-blue);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Alternate Row Coloring */
+table tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* ✅ Light Mode Hover (now visible & elegant) */
+table tr:hover {
+  background-color: rgba(79, 70, 229, 0.08); /* soft bluish hover */
+  color: var(--color-text-primary);
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(79, 70, 229, 0.2); /* subtle blue glow */
+  transform: scale(1.003);
+}
+
+/* ---------- DARK MODE ---------- */
+body.dark table {
+  background: var(--color-bg-card);
+  color: var(--color-text-primary);
+}
+
+body.dark table tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark table th {
+  background: var(--color-accent-purple);
+  color: var(--color-text-inverse);
+}
+
+/* ✅ Dark Mode Hover (purple glow) */
+body.dark table tr:hover {
+  background-color: rgba(168, 85, 247, 0.15); /* soft purple overlay */
+  color: var(--color-text-inverse);
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.4);
+  transform: scale(1.003);
+}

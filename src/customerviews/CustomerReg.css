@@ -1,0 +1,139 @@
+/* === CONTAINER === */
+.customerreg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4f46e5, #6366f1, #818cf8);
+  font-family: "Poppins", sans-serif;
+  padding: 2rem;
+}
+
+/* === CARD === */
+.customerreg-form {
+  background: #fff;
+  width: 600px; /* ⬆️ Increased width from 420px */
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
+  padding: 2.5rem 3rem;
+  transition: all 0.3s ease;
+}
+
+.customerreg-form:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.25);
+}
+
+/* === TITLE === */
+.customerreg-form h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* === STATUS MESSAGE === */
+.status {
+  text-align: center;
+  color: #16a34a;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* === FORM STRUCTURE === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* === LABELS === */
+.customerreg-form label {
+  display: block;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 4px;
+}
+
+/* === INPUTS, SELECTS === */
+.customerreg-form input[type="text"],
+.customerreg-form input[type="password"],
+.customerreg-form input[type="number"],
+.customerreg-form input[type="email"],
+.customerreg-form input[type="file"],
+.customerreg-form select {
+  width: 100%;
+  padding: 0.8rem 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.customerreg-form input:focus,
+.customerreg-form select:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+  outline: none;
+}
+
+/* === READONLY FIELDS === */
+.readonly {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #f3f4f6;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* === FILE PREVIEW === */
+.customerreg-form img {
+  display: block;
+  margin-top: 0.6rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* === ERROR TEXT === */
+.error {
+  color: #e11d48;
+  font-size: 0.85rem;
+  margin-top: 3px;
+}
+
+/* === BUTTON === */
+.btn {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #4338ca, #4f46e5);
+  transform: scale(1.03);
+}
+
+/* === FORM ACTIONS === */
+.form-actions {
+  margin-top: 1.4rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 640px) {
+  .customerreg-form {
+    width: 95%;
+    padding: 1.8rem;
+  }
+}

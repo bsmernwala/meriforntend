@@ -1,0 +1,352 @@
+/* ================================
+   GLOBAL STYLE
+   ================================ */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #002b80; /* Deep blue base */
+  color: #fff;
+}
+
+/* ================================
+   HEADER SECTION
+   ================================ */
+.eshop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #001f5f;
+  color: #fff;
+  padding: 14px 30px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* LEFT: USER PROFILE */
+.eshop-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 180px;
+}
+
+.user-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.username {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.cart {
+  background: #0044cc;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* CENTER: TITLE */
+.eshop-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  flex: 1;
+  color: #fff;
+}
+
+/* RIGHT: SEARCH + CHECKOUT */
+.eshop-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 250px;
+}
+
+.select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  background-color: #0044cc;
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.select:hover {
+  background-color: #0055ff;
+}
+
+.checkout-btn {
+  background: #0099ff;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.checkout-btn:hover {
+  background: #007acc;
+}
+
+/* ================================
+   PRODUCT GRID BACKGROUND (BLUE)
+   ================================ */
+.product-list-wide {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  background: linear-gradient(180deg, #003399 0%, #001f5f 100%);
+  min-height: 100vh;
+}
+
+/* ================================
+   PRODUCT CARD (LIGHTER BLUE)
+   ================================ */
+.dark-card {
+  background: linear-gradient(180deg, #0055ff 0%, #003bb3 100%);
+  color: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dark-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* PRODUCT IMAGE */
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #002b80;
+}
+
+/* PRODUCT TEXT */
+.dark-card h4 {
+  font-size: 1.1rem;
+  margin: 6px 0;
+  color: #fff;
+}
+
+.dark-card p {
+  margin: 4px 0;
+  color: #dce7ff;
+}
+
+.strike {
+  text-decoration: line-through;
+  color: #aac7ff;
+  font-size: 0.9rem;
+}
+
+/* ================================
+   BUTTONS & QUANTITY
+   ================================ */
+.buy {
+  background-color: #0073e6;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.3s;
+  width: 100%;
+  font-weight: 600;
+}
+
+.buy:hover {
+  background-color: #005bb5;
+}
+
+.quantity-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.quantity-controls button {
+  background-color: #0055cc;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.quantity-controls button:hover {
+  background-color: #003d99;
+}
+
+.quantity-controls span {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* ================================
+   RESPONSIVE ADJUSTMENTS
+   ================================ */
+@media (max-width: 768px) {
+  .eshop-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .eshop-title {
+    order: -1;
+  }
+
+  .product-list-wide {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    padding: 20px;
+  }
+
+  .dark-card {
+    padding: 12px;
+  }
+}
+
+/* ===== HEADER (Blue Theme) ===== */
+.eshop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #003399 0%, #0055cc 100%);
+  color: #fff;
+  padding: 12px 28px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* User section */
+.eshop-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  object-fit: cover;
+}
+
+.username {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Title center */
+.eshop-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  flex: 1;
+}
+
+/* Right side: search + cart + button */
+.eshop-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.select {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #0044cc;
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.select:hover {
+  background-color: #0055ff;
+}
+
+.cart {
+  background: #0066ff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.checkout-btn {
+  background: #00aaff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.checkout-btn:hover {
+  background: #0088cc;
+}
+
+/* ===== CART STYLING ===== */
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #0073e6;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cart:hover {
+  background: #005bb5;
+}
+
+/* Item count bubble */
+.cart::after {
+  content: attr(data-count);
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: #ff3333;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  min-width: 18px;
+  text-align: center;
+  line-height: 1.2;
+}
