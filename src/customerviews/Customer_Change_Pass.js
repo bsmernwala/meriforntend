@@ -18,7 +18,9 @@ export default function Customer_Change_Pass() {
     new: false,
     confirm: false,
   });
-
+//get env
+ const REACT_APP_BASE_API_URL=process.env.REACT_APP_BASE_API_URL;
+ 
   // Auto-clear messages after 4s
   useEffect(() => {
     if (message || error) {
@@ -63,7 +65,7 @@ export default function Customer_Change_Pass() {
 
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:9191/customer/changepassword", {
+      const res = await axios.post(`${REACT_APP_BASE_API_URL}"/customer/changepassword`, {
         CUserId,
         OldPassword: oldPassword,
         NewPassword: newPassword,

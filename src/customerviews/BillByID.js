@@ -14,16 +14,17 @@ function BillByID(props) {
   const [billId, setBillId] = useState("");
   const [billdate, setBillDate] = useState("");
   const [loading, setLoading] = useState(true);
-
+//get env
+const REACT_APP_BASE_API_URL=process.env.REACT_APP_BASE_API_URL;
   // ===========================
   // Load bill IDs, products, and bill dates
   // ===========================
   useEffect(() => {
     setLoading(true);
     Promise.all([
-      axios.get(`http://localhost:9191/bill/billshowbillids/${props.data}`),
-      axios.get("http://localhost:9191/product/showproduct"),
-      axios.get(`http://localhost:9191/bill/billshowbilldates/${props.data}`),
+      axios.get(`${REACT_APP_BASE_API_URL}/bill/billshowbillids/${props.data}`),
+      axios.get(`${REACT_APP_BASE_API_URL}/product/showproduct`),
+      axios.get(`${REACT_APP_BASE_API_URL}/bill/billshowbilldates/${props.data}`),
     ])
       .then(([billRes, prodRes, dateRes]) => {
         setBillIdList(billRes.data);
@@ -45,7 +46,7 @@ function BillByID(props) {
 
     try {
       const res = await axios.get(
-        `http://localhost:9191/bill/showbillbyid/${selectedId}`
+        `${REACT_APP_BASE_API_URL}/bill/showbillbyid/${selectedId}`
       );
       setBillDetailsList(res.data);
     } catch (err) {
@@ -64,7 +65,7 @@ function BillByID(props) {
 
     try {
       const res = await axios.get(
-        `http://localhost:9191/bill/showbillbydate/${selectedDate}`
+        `${REACT_APP_BASE_API_URL}/bill/showbillbydate/${selectedDate}`
       );
       setBillDetailsList(res.data);
     } catch (err) {
@@ -78,7 +79,7 @@ function BillByID(props) {
   const fetchCustomerDetails = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:9191/customer/getcustomerdetails/${props.data}`
+        `${REACT_APP_BASE_API_URL}/customer/getcustomerdetails/${props.data}`
       );
       setCustDetails(res.data);
       return res.data;

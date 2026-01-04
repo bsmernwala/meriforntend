@@ -15,7 +15,8 @@ function Bill({ data, onBack, onPaymentSuccess, onUpdateCart, onRemoveItem }) {
   const [quantities, setQuantities] = useState({});
   const [isPaymentDone, setIsPaymentDone] = useState(false);
   const [billId, setBillId] = useState("");
-
+ //get env
+ const REACT_APP_BASE_API_URL=process.env.REACT_APP_BASE_API_URL;
   // -----------------------
   //  Helper: Format Date
   // -----------------------
@@ -41,7 +42,7 @@ function Bill({ data, onBack, onPaymentSuccess, onUpdateCart, onRemoveItem }) {
     setQuantities(qtyObj);
 
     axios
-      .get(`http://localhost:9191/customer/getcustomerdetails/${data.cid}`)
+      .get(`${REACT_APP_BASE_API_URL}/customer/getcustomerdetails/${data.cid}`)
       .then((res) => {
         setCustomer({
           name: res.data.CustomerName,
@@ -112,7 +113,7 @@ function Bill({ data, onBack, onPaymentSuccess, onUpdateCart, onRemoveItem }) {
   const saveBill = useCallback(async () => {
     if (!items.length) return;
 
-    const res = await axios.get("http://localhost:9191/bill/getbillid/");
+    const res = await axios.get(`${REACT_APP_BASE_API_URL}/bill/getbillid/`);
     const nextId = parseInt(res.data[0].billid) + 1;
     setBillId(nextId);
 
@@ -122,7 +123,7 @@ function Bill({ data, onBack, onPaymentSuccess, onUpdateCart, onRemoveItem }) {
       const qty = quantities[item.pid];
       const subtotal = item.oprice * qty;
 
-      await axios.post("http://localhost:9191/bill/billsave", {
+      await axios.post(`${REACT_APP_BASE_API_URL}/bill/billsave`, {
         billid: nextId,
         billdate: today,
         cid: data.cid,
@@ -130,7 +131,7 @@ function Bill({ data, onBack, onPaymentSuccess, onUpdateCart, onRemoveItem }) {
         qty,
       });
 
-      await axios.post("http://localhost:9191/sales/add", {
+      await axios.post(`${REACT_APP_BASE_API_URL}/sales/add`, {
         venderId: item.vid,
         productId: item.pid,
         quantity: qty,
@@ -158,8 +159,7 @@ function Bill({ data, onBack, onPaymentSuccess, onUpdateCart, onRemoveItem }) {
 
     const amountInPaisa = totalAmount * 100;
 
-    const order = await axios.post(
-      `http://localhost:9191/payment/orders/${amountInPaisa}`
+    const order = await axios.post(`${REACT_APP_BASE_API_URL}/payment/orders/${amountInPaisa}`
     );
 
     const { id: order_id, amount, currency } = order.data;
@@ -173,7 +173,7 @@ function Bill({ data, onBack, onPaymentSuccess, onUpdateCart, onRemoveItem }) {
       image: { logo },
       order_id,
       handler: async function (response) {
-        await axios.post("http://localhost:9191/paymentdetails/paymentdetailsave", {
+        await axios.post(`${REACT_APP_BASE_API_URL}/paymentdetails/paymentdetailsave`, {
           orderCreationId: order_id,
           razorpayPaymentId: response.razorpay_payment_id,
           razorpayOrderId: response.razorpay_order_id,
