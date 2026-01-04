@@ -6,7 +6,7 @@ import CustomerLoginPopup from "../customerviews/CustomerLoginPopup";
 import "../index.css";
 import "./ProductListForMainPage.css";
 
-
+//productlistformain this is for main page first page
 function ProductListforMainPage() {
   const [itemcount, setItemCount] = useState(0);
   const [selitems, setSelItems] = useState([]);
