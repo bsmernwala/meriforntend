@@ -72,7 +72,7 @@ const REACT_APP_BASE_API_URL=process.env.REACT_APP_BASE_API_URL;
             stid:stid,
             status:status
         }       
-        axios.post(BASE_API_URL+"/city/save/",obj).then((res)=>{
+        axios.post(REACT_APP_BASE_API_URL+"/city/save/",obj).then((res)=>{
             alert(res.data);
             setCtId("");
             setCtName("");
@@ -103,7 +103,7 @@ const REACT_APP_BASE_API_URL=process.env.REACT_APP_BASE_API_URL;
         
         if(ctid!=undefined&&ctid!="")
         {
-        axios.get(BASE_API_URL+"/city/search/"+ctid).then((res)=>{
+        axios.get(REACT_APP_BASE_API_URL+"/city/search/"+ctid).then((res)=>{
             
             if(res.data.stid!=undefined)
             {

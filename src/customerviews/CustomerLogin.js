@@ -24,7 +24,7 @@ function CustomerLogin() {
   const [forgotMessage, setForgotMessage] = useState("");
 
   const navigate = useNavigate();
-
+const REACT_APP_BASE_API_URL=process.env.REACT_APP_BASE_API_URL;
   useEffect(() => {
     const myCookies = Cookies.get("auth");
     if (myCookies) {
@@ -57,7 +57,7 @@ function CustomerLogin() {
     setAuthError(""); // Reset previous auth errors
 
     axios
-      .post("http://localhost:9191/customer/login", {
+      .post(REACT_APP_BASE_API_URL+"/customer/login", {
         CUserId: uid,
         CUserPass: upass,
       })
@@ -116,7 +116,7 @@ function CustomerLogin() {
     }
 
     axios
-      .post("http://localhost:9191/customer/forgotpassword/send-otp", {
+      .post(REACT_APP_BASE_API_URL+"/customer/forgotpassword/send-otp", {
         CUserId: forgotEmail,
       })
       .then((res) => {
@@ -135,7 +135,7 @@ function CustomerLogin() {
     }
 
     axios
-      .post("http://localhost:9191/customer/forgotpassword/verify-otp", {
+      .post(REACT_APP_BASE_API_URL+"/customer/forgotpassword/verify-otp", {
         CUserId: forgotEmail,
         OTP: otp,
         NewPassword: newPassword,

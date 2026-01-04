@@ -81,7 +81,7 @@ const REACT_APP_BASE_API_URL=process.env.REACT_APP_BASE_API_URL;
         
         if(stid!=undefined&&stid!="")
         {
-        axios.get(BASE_API_URL+"/state/search/"+stid).then((res)=>{
+        axios.get(REACT_APP_BASE_API_URL+"/state/search/"+stid).then((res)=>{
             
             if(res.data.stid!=undefined)
             {
