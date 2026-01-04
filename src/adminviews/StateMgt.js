@@ -97,7 +97,7 @@ const REACT_APP_BASE_API_URL=process.env.REACT_APP_BASE_API_URL;
     }
      if(stname!=undefined&&stname!="")
         {
-        axios.get(REACT_APP_BASE_API_URL+"/state/searchbyname/"+stname).then((res)=>{
+            axios.get(`${REACT_APP_BASE_API_URL}/state/searchbyname/${stname}`).then((res)=>{
            
             if(res.data.stid!=undefined)
                 {

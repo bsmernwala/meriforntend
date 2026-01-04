@@ -92,7 +92,7 @@ const REACT_APP_BASE_API_URL=process.env.REACT_APP_BASE_API_URL;
 
     const handleShowButton=()=>{
         axios.get(        
-            BASE_API_URL+"/city/getall").then((res)=>{
+            REACT_APP_BASE_API_URL+"/city/getall").then((res)=>{
             setCtList(res.data);
         }).catch((err)=>{
             alert(err);
