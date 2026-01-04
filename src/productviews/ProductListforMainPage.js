@@ -21,10 +21,10 @@ function ProductListforMainPage() {
 const REACT_APP_BASE_API_URL=process.env.REACT_APP_BASE_API_URL;
   
   useEffect(() => {
-    axios.get(REACT_APP_BASE_API_URL+"/product/showproduct")
+    axios.get(`${REACT_APP_BASE_API_URL}/product/showproduct`)
       .then((res) => setPList(res.data))
       .catch((err) => alert(err));
-    axios.get(REACT_APP_BASE_API_URL+"/productcatg/showproductcatg")
+    axios.get(`${REACT_APP_BASE_API_URL}/productcatg/showproductcatg`)
       .then((res) => setPCatgList(res.data))
       .catch((err) => alert(err));
 
